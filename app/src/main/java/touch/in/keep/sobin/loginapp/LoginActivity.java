@@ -19,15 +19,18 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        //layout linking
         username =findViewById(R.id.username);
         password = findViewById(R.id.password);
 
         create =findViewById(R.id.create);
 
+        //textview click
         create.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
+                //start new activity
                 Intent intent = new Intent(LoginActivity.this,RegistrationActivity.class);
                 startActivity(intent);
                 finish();
@@ -36,21 +39,25 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
+    //button click
     public void login(View view){
-
 
         String user = "lumier";
         String pass = "123";
 
+        //getting values from edittext
         String str_username = username.getText().toString();
         String str_password = password.getText().toString();
 
         if(str_username.equals(user) && str_password.equals(pass)) {
 
+            //start new activity
             Intent intent = new Intent(LoginActivity.this, MainActivity.class);
             startActivity(intent);
+
         }else{
 
+            //create toast
             Toast.makeText(this,"Invalid Username or Passsword",Toast.LENGTH_SHORT).show();
         }
     }
