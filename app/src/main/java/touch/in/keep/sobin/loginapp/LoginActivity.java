@@ -13,6 +13,8 @@ public class LoginActivity extends AppCompatActivity {
     TextInputEditText username,password;
     TextView create;
 
+    PrefManager prefManager;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +39,8 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+        prefManager = new PrefManager(this);
+
     }
 
     //button click
@@ -51,6 +55,8 @@ public class LoginActivity extends AppCompatActivity {
 
         if(str_username.equals(user) && str_password.equals(pass)) {
 
+            prefManager.createUser(1);
+
             //start new activity
             Intent intent = new Intent(LoginActivity.this, MainActivity.class);
             startActivity(intent);
@@ -60,5 +66,19 @@ public class LoginActivity extends AppCompatActivity {
             //create toast
             Toast.makeText(this,"Invalid Username or Passsword",Toast.LENGTH_SHORT).show();
         }
+    }
+
+    protected void onResume(){
+        super.onResume();
+
+        Boolean islogged = prefManager.isLoggedIn();
+
+        if(islogged){
+            Intent intent =new Intent(this,MainActivity.class);
+            startActivity(intent);
+        }else{
+            
+        }
+
     }
 }
