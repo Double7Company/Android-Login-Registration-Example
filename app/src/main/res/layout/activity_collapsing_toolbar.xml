@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="touch.in.keep.sobin.loginapp.CollapsingToolbarActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:id="@+id/appbar"
+        android:fitsSystemWindows="true">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            app:contentScrim="?attr/colorPrimary"
+            android:id="@+id/collapsing_toolbar"
+            app:expandedTitleGravity="top"
+            android:fitsSystemWindows="true"
+            >
+            <!--<ImageView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="300dp"-->
+                <!--android:src="@drawable/photo"-->
+                <!--android:scaleType="centerCrop"-->
+                <!--app:layout_collapseMode="parallax"-->
+                <!--app:layout_collapseParallaxMultiplier="0.5" />-->
+
+            <android.support.v7.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:titleTextColor="#fff"
+                android:id="@+id/toolbar">
+
+            </android.support.v7.widget.Toolbar>
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,68 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:padding="16dp"
     android:background="#efef"
     tools:context="touch.in.keep.sobin.loginapp.LoginActivity">
 
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="16dp"
-        android:textSize="24dp"
-        android:layout_marginTop="50dp"
-        android:gravity="center"
-        android:textStyle="bold"
-        android:textColor="#ff00"
-        android:text="Sign IN"/>
+        android:layout_height="match_parent">
 
-
-    <android.support.design.widget.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="16dp">
-
-        <android.support.design.widget.TextInputEditText
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/username"
-            android:drawableLeft="@drawable/ic_person_black_24dp"
-            android:drawablePadding="6dp"
-            android:hint="Email/Username" />
-    </android.support.design.widget.TextInputLayout>
+            android:id="@+id/relLayout1">
 
-    <android.support.design.widget.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="16dp">
-
-        <android.support.design.widget.TextInputEditText
+        </RelativeLayout>
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/password"
-            android:drawablePadding="16dp"
-            android:drawableLeft="@drawable/ic_lock_black_24dp"
-            android:hint="Password" />
-    </android.support.design.widget.TextInputLayout>
+            android:layout_height="match_parent"
+            android:id="@+id/relLayout2"
+            android:layout_below="@id/relLayout1">
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#ff00"
-        android:textColor="#fff"
-        android:onClick="login"
-        android:text="Login"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/linear"
+                android:orientation="vertical">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="16dp"
-        android:textColor="#000"
-        android:gravity="center"
-        android:id="@+id/create"
-        android:text="Create Account"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:textSize="24dp"
+                    android:layout_marginTop="50dp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textColor="#ff00"
+                    android:text="Sign IN"/>
 
-</LinearLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/username"
+                        android:drawableLeft="@drawable/ic_person_black_24dp"
+                        android:drawablePadding="6dp"
+                        android:hint="Email/Username" />
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/password"
+                        android:drawablePadding="16dp"
+                        android:drawableLeft="@drawable/ic_lock_black_24dp"
+                        android:hint="Password" />
+                </android.support.design.widget.TextInputLayout>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#ff00"
+                    android:textColor="#fff"
+                    android:onClick="login"
+                    android:text="Login"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:textColor="#000"
+                    android:layout_marginTop="20dp"
+                    android:gravity="bottom|center"
+                    android:id="@+id/create"
+                    android:text="Create Account"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>
